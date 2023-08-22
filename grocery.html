@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .catrgories {
+            display: flex;
+            justify-content: space-around;
+            padding: 5px 0px;
+            background-color: antiquewhite;
+            margin-left: 5px;
+        }
+
+        .category {
+
+            text-align: center;
+            width: 80px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .cateory {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+        }
+
+        .category :hover {
+            color: rgb(15, 15, 231);
+        }
+
+        .category img:hover {
+
+            color: blue;
+        }
+
+        .but {
+            font-size: 15px;
+            padding: 5px 10px;
+            background-color: #2874F0;
+            color: #fff;
+            border-radius: 5px;
+
+
+        }
+
+        .catrgorie {
+            background-color: whitesmoke;
+            padding: 30px 0px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .slider-frame {
+            overflow: hidden;
+            height: 300px;
+            margin-left: 5px;
+        }
+
+        .img-container {
+            width: 1200px;
+            position: relative;
+            float: left;
+            margin-top: 20px;
+        }
+
+        @keyframes slide_animation {
+            0% {
+                left: 0px;
+            }
+
+            10% {
+                left: 0px;
+            }
+
+            20% {
+                left: 1200px;
+            }
+
+            30% {
+                left: 1200px;
+            }
+
+            40% {
+                left: 2400px;
+            }
+
+            50% {
+                left: 2400px;
+            }
+
+            60% {
+                left: 1200px;
+            }
+
+            70% {
+                left: 1200px;
+            }
+
+            80% {
+                left: 0px;
+            }
+
+            90% {
+                left: 0px;
+            }
+
+            100% {
+                left: 0px;
+            }
+        }
+
+
+        .slide-images {
+            width: 3600px;
+            height: 800px;
+            margin: 0 0 0 -1200px;
+            position: relative;
+            -webkit-animation-name: slide_animation;
+            animation-name: slide_animation;
+            -webkit-animation-duration: 1s;
+            animation-duration: 0s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+            -webkit-animation-play-state: running;
+            animation-play-state: running;
+        }
+
+        #card {
+            display: flex;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        #card img {
+            padding: 4px;
+            width: 495px;
+
+
+        }
+
+        #cards {
+            display: flex;
+            margin-top: 2px;
+            margin-left: 5px;
+        }
+
+        #cards img {
+            padding: 4px;
+            width: 495px;
+        }
+
+        .category:hover {
+            color: blue;
+        }
+
+        .head {
+            list-style-type: none;
+            position: relative;
+
+
+        }
+
+        .header ul {
+            display: flex;
+            background-color: rgb(72, 80, 237);
+            justify-content: space-evenly;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        #search {
+            width: 600px;
+            height: 35px;
+            border-radius: 6px;
+            background-color: whitesmoke;
+        }
+
+        #name {
+            position: absolute;
+            top: 35px;
+            left: 153px;
+            font-style: italic;
+
+        }
+
+        #img {
+            position: absolute;
+            top: 39px;
+            left: 235px;
+        }
+
+        .catrgoriee {
+            background-color: whitesmoke;
+            padding: 50px 0px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        .cat {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+        }
+
+        .paragraph {
+            background-color: whitesmoke;
+            margin-left: 20px;
+
+        }
+
+        .Footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(44, 42, 42);
+            color: white;
+        }
+
+        .last {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(44, 42, 42);
+            color: #fff;
+
+        }
+
+        .payment {
+            margin-top: 20px;
+            margin-left: 50px;
+
+        }
+
+        .foot {
+            margin-bottom: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .size {
+            margin-left: 0px;
+            margin-right: 0px;
+
+        }
+
+        .flipkart {
+            margin-left: 75px;
+            margin-top: -7px;
+        }
+
+        .imgcart {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .Cart {
+            width: 70%;
+            margin-left: 15%;
+            background-color: #fff;
+            height: 550px;
+
+        }
+
+        .flip {
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 5px solid whitesmoke;
+
+        }
+
+        .flip p {
+            padding: 20px 0px;
+            background-color: whitesmokes;
+        }
+
+        .size {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body class="size">
+    <nav class="header">
+        <ul>
+            <li class="head"> <img
+                    src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                    width="80px" class="flipkart"></li>
+
+            <li class="head" id="name"><span style="color: rgb(254, 254, 250);">Explore</span> <span
+                    style="color: rgb(255, 217, 0);">Plus</span></li>
+            <img width="15"
+                src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/plus-brand-bc165b.svg"
+                height="10" id="img">
+
+            <li class="head"> <input type="search" placeholder="Search for products,Brands and more" id="search"> </li>
+
+            <a href=""
+                style=" background-color:#fff;color:blue;padding: 5px 35px ;font-size: 18px;text-decoration: none;">Login</a>
+
+        </ul>
+    </nav>
+    <br>
+
+    <div class="Cart">
+        <div class="flip">
+            <p>
+                <a style="color: #2874F0;text-decoration: none;" href="./flip.html" target="_blank">Flipkart
+                </a>
+            </p>
+            <p>
+                <a style="color: #2874F0;text-decoration: none;" href="./grocery.html" target="_blank">Grocery
+                </a>
+            </p>
+        </div>
+        <div class="imgcart">
+            <img src="images/Capture1.PNG" alt="">
+
+            <br>
+            <p style="text-align: center; margin-top: 30px;">Your basket is empty!</p>
+            <br>
+            <p style="text-align: center;">Enjoy Upto 50% Savings on Grocery</p>
+            <br>
+
+
+            <a href="" style="background-color: blue; color: #fff; padding: 15px 80px;text-decoration: none;">Shop
+                now</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div>
+        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Policies:Returns Policy | Terms
+            of
+            use | Security | Privacy | Infringement &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; © 2007-2023 Flipkart.com &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Need help?
+            Visit
+            the
+            <a style=" text-decoration: none;color: #2874F0;">Help Center</a>
+            or <a style="text-decoration: none;color: #2874F0;">Contact Us</a>
+        </p>
+    </div>
+
+</body>
+
+</html>
